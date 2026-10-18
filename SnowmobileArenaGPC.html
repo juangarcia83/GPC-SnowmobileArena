@@ -1,0 +1,48 @@
+<!doctype html>
+<!--
+  Proyecto personal GPC: Carrera de motos de nieve
+  Juan Alfonso Garcia-Real
+-->
+<html lang="es">
+	<head>
+		<meta charset='utf-8'>
+		<title>Motos de nieve - Proyecto GPC</title>
+		<style>
+			body {
+				background-color: #000;
+				margin: 0px;
+				overflow: hidden;
+			}
+			/* Canvas de texto superpuesto al de three.js (como en s4-gui-text) */
+			#text_canvas {
+				position: absolute;
+				pointer-events: none;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Contenedor del app -->
+		<div id="container"></div>
+
+		<!-- Canvas para el HUD (texto, marcador, mensajes) -->
+		<canvas id="text_canvas"></canvas>
+
+		<!-- Scripts de biblioteca -->
+		<script src="lib/three.min_r140.js"></script>
+		<script src="lib/OrbitControls.js"></script>
+		<script src="lib/lil-gui_0.16.1.js"></script>
+		<script src="lib/fflate.min.js"></script>
+		<script src="lib/FBXLoader.js"></script>
+
+		<!-- Mi codigo (el orden importa: juego.js va el ultimo) -->
+		<script src="js/escenario.js"></script>
+		<script src="js/objetos.js"></script>
+		<script src="js/motos.js"></script>
+		<script src="js/juego.js"></script>
+
+	</body>
+</html>
